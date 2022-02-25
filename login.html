@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="动画函数.js"></script>
+    <script src="jQuery.min.js"></script>
+    <script src="login.js"></script>
+
+
+<body>
+    <!-- 登录的头部 -->
+    <div class="head">
+        <div class="logo">
+            <a href="#">
+                <img src="图片\logo-201305-b.png" alt="">
+            </a>
+            <b></b>
+
+        </div>
+        <a href="#" class="q-link">
+            <b></b>
+            登录页面,调查问卷</a>
+
+    </div>
+
+    <div class="content">
+        <!-- 安全法 -->
+        <div class="tips-wrappers">
+            <div class="nav"> <i class="icon-tips"></i>
+                <p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版
+                    《京东隐私政策》已上线，将更有利于保护您的个人隐私。</p>
+            </div>
+        </div>
+
+        <!-- 中间用户登录界面 -->
+        <div class="login-wrapper">
+            <div class="w">
+                <div class="login-form">
+                    <div class="tips-wrappers">
+                        <div class="nav"> <i class="icon-tips"></i>
+                            <p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+                        </div>
+                    </div>
+
+                    <!-- 按钮切换 -->
+                    <div class="login-tab login-tab-l">
+                        <a href="#" clstag="pageclick|keycount|login_pc_201804112|9" class="checked"
+                            style="outline: rgb(109, 109, 109) none 0px;"> 扫码登录</a>
+                    </div>
+                    <div class="login-tab login-tab-r">
+                        <a href="#" clstag="pageclick|keycount|login_pc_201804112|10"
+                            style="outline: rgb(109, 109, 109) none 0px;" class="">账户登录</a>
+                    </div>
+
+
+
+                    <!-- 二维码部分 -->
+                    <div class="qrcode-login" style="visibility:visible;">
+                        <!-- 刷新模块 -->
+                        <div class="qrcode-error-2016"></div>
+
+                        <div class="qrcode-main">
+                            <div class="qrcode-img">
+                                <img src="图片\show.png" alt="">
+
+                            </div>
+                            <div class="qrcode-hlep" dispaly="none">
+
+                            </div>
+                        </div>
+
+                        <div class="qrcode-panel">
+                            <ul>
+                                <li class="fore1">
+                                    <span>打开</span>
+                                    <a href="/uc/links?tag=apps" target="_blank"
+                                        clstag="pageclick|keycount|201607144|9">
+                                        <span class="red" style="color: #e4393c;">手机京东</span></a>
+                                </li>
+                                <li>扫描二维码</li>
+                            </ul>
+                        </div>
+
+                        <div class="coagent qr-coagent" id="qrCoagent">
+                            <ul>
+                                <li><b></b><em>免输入</em></li>
+                                <li><b class="faster"></b><em>更快&nbsp;</em></li>
+                                <li><b class="more-safe"></b><em>更安全</em></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- 用户登录部分 -->
+                    <div class="login-box">
+                        <div class="tab-h"></div>
+                        <div class="msg-wrap">
+                            <div class="msg-error" style="display: none;"><b></b>
+                                <div class="ms">""</div>
+                            </div>
+                        </div>
+
+                        <div class="mc">
+                            <div class="form">
+                                <div class="item item-fore1">
+                                    <label for="loginname" class="login-label name-label"></label>
+                                    <input id="loginname" type="text" class="itxt" name="loginname" tabindex="1"
+                                        _input="true" autocomplete="off" value="" placeholder="邮箱/用户名/登录手机">
+                                    <span class="clear-btn1"></span>
+                                </div>
+                                <div id="entry" class="item item-fore2" style="visibility: visible;">
+                                    <label class="login-label pwd-label" for="nloginpwd"></label>
+                                    <input type="password" id="nloginpwd" name="nloginpwd" class="itxt itxt-error"
+                                        tabindex="2" autocomplete="off" _input="true" placeholder="密码">
+                                    <span class="clear-btn2" style="display: none;"></span>
+                                    <span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
+                                </div>
+                                <div class="item item-fore4">
+                                    <div class="safe">
+                                        <span></span>
+                                        <span class="forget-pw-safe">
+                                            <a href="#" class="" target="_blank"
+                                                clstag="pageclick|keycount|login_pc_201804112|6"
+                                                style="outline: rgb(109, 109, 109) none 0px;">忘记密码</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="item item-fore5">
+                                    <div class="login-btn">
+                                        <a href="javascript:;" class="btn-img btn-entry" id="loginsubmit" tabindex="6"
+                                            _submit="true" clstag="pageclick|keycount|login_pc_201804112|12"
+                                            data-code=""
+                                            style="outline: rgb(109, 109, 109) none 0px;">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 微信qq部分 -->
+                    <div class="coagent" id="kbCoagent">
+                        <ul>
+                            <li>
+                                <a href="#" class="pdl">
+                                    <b class="QQ-icon"> </b>
+                                    <span>QQ</span>
+
+                                </a>
+                                <span class="line">|</span>
+                            </li>
+                            <li>
+                                <a href="#" class="pdl">
+                                    <b class="weixin-icon"> </b>
+                                    <span>微信</span>
+
+                                </a>
+                            </li>
+                            <div class="regist-link"><a href="" target="_blank"><b></b>立即注册</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 横幅部分 -->
+            <div class="login-banner">
+                <div class="w">
+                    <div id="banner-bg" class="i-inner" style="background: url(图片/background.png) 0px 0px no-repeat;">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="w">
+        <div class="footer">
+            <div class="links">
+                <a rel="nofollow" target="_blank" href="//about.jd.com/">
+                    关于我们
+                </a>
+                |
+                <a rel="nofollow" target="_blank" href="//www.jd.com/contact/">
+                    联系我们
+                </a>
+                |
+                <a rel="nofollow" target="_blank" href="//zhaopin.jd.com/">
+                    人才招聘
+                </a>
+                |
+                <a rel="nofollow" target="_blank" href="//lai.jd.com/">
+                    商家入驻
+                </a>
+                |
+                <a rel="nofollow" target="_blank" href="//jzt.jd.com/">
+                    广告服务
+                </a>
+                |
+                <a rel="nofollow" target="_blank" href="//app.jd.com/">
+                    手机京东
+                </a>
+                |
+                <a target="_blank" href="//club.jd.com/links.aspx">
+                    友情链接
+                </a>
+                |
+                <a target="_blank" href="//media.jd.com/">
+                    销售联盟
+                </a>
+                |
+                <a href="//pro.jd.com/mall/active/3WA2zN8wkwc9fL9TxAJXHh5Nj79u/index.html" target="_blank">
+                    京东社区
+                </a>
+                |
+                <a href="//gongyi.jd.com" target="_blank">
+                    京东公益
+                </a>
+                |
+                <a target="_blank" href="//www.joybuy.com/" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+            </div>
+            <div class="copyright">
+                Copyright&nbsp;©&nbsp;2004-2022&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
